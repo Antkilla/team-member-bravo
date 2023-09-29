@@ -93,8 +93,18 @@ const Employees = () => {
 
   return (
     <main className="container">
-      <div className="row justify-content-center mt-3 mb-3">
-        <div className="col-8">
+      <div class="row justify-content-center mt-3 mb-3">
+        <div class="col-6"> 
+          <select className="form-select form-select-lg">
+            <option value='TeamA'>TeamA</option>
+            <option value='TeamB'>TeamB</option>
+            <option value='TeamC'>TeamC</option>
+            <option value='TeamD'>TeamD</option>
+          </select>
+        </div>
+      </div>
+      <div class="row justify-content-center mt-3 mb-3">
+        <div class="col-8"> 
           <div class="card-collection">
             {employees.map((employee) => (
               <div id={employee.id} className="card m-2" style= {{ cursor: "pointer" }}>
