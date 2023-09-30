@@ -92,11 +92,11 @@ const Employees = () => {
     teamName: "TeamD"
   }]);
 
-function handleTeamSelectionChange(event) {
-  setTeam(event.target.value);
+function handleTeamSelectionChange(thing) {
+  setTeam(thing.target.value);
 }
-function handleEmployeeCardClick(){
-  const transformedEmployees = employees.map((employee) => employee.id === parseInt(Event.currentTarget.id)
+function handleEmployeeCardClick(thing){
+  const transformedEmployees = employees.map((employee) => employee.id === parseInt(thing.currentTarget.id)
      ?(employee.teamName === selectedTeam)?{...employee, teamName:''}:{...employee, teamName: selectedTeam}
      :employee);
 
